@@ -8,28 +8,29 @@
         <thead>
         <tr>
 
-            <th scope="col">Nome</th>
-            <th scope="col">Idade</th>
-            <th scope="col">Genero</th>
-            <th scope="col">Etnia</th>
-            <th scope="col">SPA</th>
-            <th scope="col">Tempo de rua</th>
+            <th scope="col">Data</th>
+            <th scope="col">Hora</th>
+            <th scope="col">Local</th>
             <th scope="col">Profissional</th>
+            <th scope="col">Ação</th>
+            <th scope="col">Sujeitos</th>
+            <th scope="col">Avaliação</th>
             <th scope="col">Editar</th>
             <th scope="col">Excluir</th>
 
         </tr>
         </thead>
         <tbody>
-        {% for cliente in clientes %}
+        {% for diario in diario %}
         <tr>
-            <th>{{ cliente.nome }}</th>
-            <th>{{ cliente.idade }}</th>
-            <th>{{ cliente.genero }}</th>
-            <th>{{ cliente.etnia }}</th>
-            <th>{{ cliente.spa }}</th>
-            <th>{{ cliente.temporua }}</th>
-            <th>{{ cliente.profissional }}</th>
+            <th>{{ diario.data }}</th>
+            <th>{{ diario.hora }}</th>
+            <th>{{ diario.local }}</th>
+            <th>{{ diario.profissional }}</th>
+            <th>{{ diario.acao }}</th>
+            <th>{{ diario.sujeitos }}</th>
+            <th>{{ diario.avaliacao }}</th>
+
             <th><a href="#">
                 <button type="button" class="btn btn-primary btn-sm">Editar</button>
             </a></th>

@@ -3,11 +3,12 @@ from django.urls import path, include
 from django.conf.urls import handler404, handler500
 from core import views
 
-
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('core.urls')),
     path('', include('servicos.urls')),
+    path('', include('clientes.urls')),
+    path('', include('diario.urls')),
 ]
 
 handler404 = views.error404

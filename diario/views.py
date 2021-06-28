@@ -1,3 +1,11 @@
 from django.shortcuts import render
+from diario.models import Diario
 
-# Create your views here.
+
+def diario(request):
+    diario = Diario.objects.all()
+    context = {
+        'diario': diario
+    }
+
+    return render(request, 'diario.html', context)

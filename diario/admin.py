@@ -1,3 +1,5 @@
 from django.contrib import admin
 
-# Register your models here.
+from diario.models import Diario
+
+admin.site.register(Diario)
