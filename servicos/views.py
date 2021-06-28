@@ -1,6 +1,14 @@
 from django.shortcuts import render
 
+from servicos.models import Servicos
+
+
 def servicos(request):
-    return render(request, 'servicos.html')
+    servicos = Servicos.objects.all()
+    context = {
+        'servicos': servicos
+    }
+
+    return render(request, 'servicos.html', context)
 
 

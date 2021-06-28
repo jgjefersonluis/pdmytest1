@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<table class="table table-striped">
+    <thead>
+    <tr>
+
+        <th scope="col">Turno</th>
+        <th scope="col">Profissional</th>
+        <th scope="col">Nome</th>
+        <th scope="col">Ação</th>
+        <th scope="col">Demanda</th>
+        <th scope="col">Encaminhamento</th>
+        <th scope="col">Editar</th>
+        <th scope="col">Excluir</th>
+
+    </tr>
+    </thead>
+    <tbody>
+    {% for servico in servicos %}
+    <tr>
+        <th>{{ servico.turno }}</th>
+        <th>{{ servico.profissional }}</th>
+        <th>{{ servico.nome }}</th>
+        <th>{{ servico.acao }}</th>
+        <th>{{ servico.demanda }}</th>
+        <th>{{ servico.encaminhamento }}</th>
+        <th><a href="#">Editar</a></th>
+        <th><a href="#">Excluir</a></th>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+
+{% endblock content %}
+
