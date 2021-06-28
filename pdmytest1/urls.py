@@ -9,6 +9,8 @@ urlpatterns = [
     path('', include('servicos.urls')),
     path('', include('clientes.urls')),
     path('', include('diario.urls')),
+    path('', include('tarefas.urls')),
+    path('', include('graficos.urls')),
 ]
 
 handler404 = views.error404

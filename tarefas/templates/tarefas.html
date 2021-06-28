@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <table class="table table-hover">
+        <thead>
+        <tr>
+
+            <th scope="col">Titulo</th>
+            <th scope="col">Descrição</th>
+            <th scope="col">Status</th>
+            <th scope="col">Editar</th>
+            <th scope="col">Excluir</th>
+
+        </tr>
+        </thead>
+        <tbody>
+        {% for tarefas in tarefas %}
+        <tr>
+            <th>{{ tarefas.titulo }}</th>
+            <th>{{ tarefas.descricao }}</th>
+            <th>{{ tarefas.status }}</th>
+            <th><a href="#">
+                <button type="button" class="btn btn-primary btn-sm">Editar</button>
+            </a></th>
+            <th><a href="#">
+                <button type="button" class="btn btn-danger btn-sm">Excluir</button>
+            </a></th>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock content %}
+

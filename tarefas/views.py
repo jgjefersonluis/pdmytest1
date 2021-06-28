@@ -1,3 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+from tarefas.models import Tarefas
+
+
+def tarefas(request):
+    tarefas = Tarefas.objects.all()
+    context = {
+        'tarefas': tarefas
+    }
+
+    return render(request, 'tarefas.html', context)
