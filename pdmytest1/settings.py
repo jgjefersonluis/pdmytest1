@@ -32,6 +32,7 @@ INSTALLED_APPS = [
     'diario',
     'tarefas',
     'graficos',
+    'staticfiles',
 ]
 
 MIDDLEWARE = [
