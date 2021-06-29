@@ -1,5 +1,8 @@
 from django.contrib import admin
 
-from tarefas.models import Tarefas
+from .models import Tarefas
 
-admin.site.register(Tarefas)
+
+@admin.register(Tarefas)
+class TarefasAdmin(admin.ModelAdmin):
+    list_display = ('titulo', 'descricao', 'status')
