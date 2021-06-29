@@ -1,5 +1,8 @@
 from django.contrib import admin
 
-from clientes.models import Clientes
+from .models import Clientes
 
-admin.site.register(Clientes)
+
+@admin.register(Clientes)
+class ClientesAdmin(admin.ModelAdmin):
+    list_display = ('nome', 'aniversario', 'idade', 'cpf')

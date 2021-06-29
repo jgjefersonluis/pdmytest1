@@ -2,7 +2,6 @@ from django.db import models
 
 
 class Clientes(models.Model):
-
     nome = models.CharField('Nome', max_length=100)
     aniversario = models.DateField('Data de Nascimento')
     idade = models.IntegerField()
