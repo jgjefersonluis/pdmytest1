@@ -1,5 +1,10 @@
 from django.contrib import admin
 
-from diario.models import Diario
+from django.contrib import admin
 
-admin.site.register(Diario)
+from .models import Diario
+
+
+@admin.register(Diario)
+class DiarioAdmin(admin.ModelAdmin):
+    list_display = ('data', 'hora', 'local', 'profissional', 'acao', 'sujeitos', 'avaliacao')
