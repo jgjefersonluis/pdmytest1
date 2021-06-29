@@ -1,7 +1,8 @@
 {% extends 'base.html' %}
 {% load bootstrap4 %}
 {% block content %}
-<h1>Adicionar um Novo Diário</h1>
+<div class="container">
+<h1 class="text-center alert alert-dark">Adicionar um Novo Diário</h1>
 <form method="post">
     {% csrf_token %}
     {% bootstrap_form form %}
@@ -12,4 +13,5 @@
     </button>
     {% endbuttons %}
 </form>
+    </div>
 {% endblock %}
